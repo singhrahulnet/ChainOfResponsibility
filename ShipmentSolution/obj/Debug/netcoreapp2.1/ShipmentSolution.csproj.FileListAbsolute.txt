@@ -1,0 +1,11 @@
+C:\Rahul\Git\ShipmentSolution\ShipmentSolution\bin\Debug\netcoreapp2.1\ShipmentSolution.deps.json
+C:\Rahul\Git\ShipmentSolution\ShipmentSolution\bin\Debug\netcoreapp2.1\ShipmentSolution.runtimeconfig.json
+C:\Rahul\Git\ShipmentSolution\ShipmentSolution\bin\Debug\netcoreapp2.1\ShipmentSolution.runtimeconfig.dev.json
+C:\Rahul\Git\ShipmentSolution\ShipmentSolution\bin\Debug\netcoreapp2.1\ShipmentSolution.dll
+C:\Rahul\Git\ShipmentSolution\ShipmentSolution\bin\Debug\netcoreapp2.1\ShipmentSolution.pdb
+C:\Rahul\Git\ShipmentSolution\ShipmentSolution\obj\Debug\netcoreapp2.1\ShipmentSolution.csprojAssemblyReference.cache
+C:\Rahul\Git\ShipmentSolution\ShipmentSolution\obj\Debug\netcoreapp2.1\ShipmentSolution.csproj.CoreCompileInputs.cache
+C:\Rahul\Git\ShipmentSolution\ShipmentSolution\obj\Debug\netcoreapp2.1\ShipmentSolution.AssemblyInfoInputs.cache
+C:\Rahul\Git\ShipmentSolution\ShipmentSolution\obj\Debug\netcoreapp2.1\ShipmentSolution.AssemblyInfo.cs
+C:\Rahul\Git\ShipmentSolution\ShipmentSolution\obj\Debug\netcoreapp2.1\ShipmentSolution.dll
+C:\Rahul\Git\ShipmentSolution\ShipmentSolution\obj\Debug\netcoreapp2.1\ShipmentSolution.pdb
