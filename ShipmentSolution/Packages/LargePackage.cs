@@ -8,13 +8,8 @@ namespace ShipmentSolution.Packages
 {
     public class LargePackage : PackageHandler
     {
-        public override bool OverSized(IPackageDimension dimension)
-        {
-            if (dimension.Length > 400 || dimension.Breadth > 600 || dimension.Height > 250)
-            {
-                return true;
-            }
-            return false;
-        }
+        public override int Length { get; set; } = 400;
+        public override int Breadth { get; set; } = 600;
+        public override int Height { get; set; } = 250;        
     }
 }

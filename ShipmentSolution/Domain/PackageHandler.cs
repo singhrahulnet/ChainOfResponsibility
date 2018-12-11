@@ -6,15 +6,16 @@ using ShipmentSolution.Models;
 
 namespace ShipmentSolution.Domain.Handler
 {
-    public abstract class PackageHandler : IRules
+    public abstract class PackageHandler : IRules, ISize
     {
         protected PackageHandler nextPackage;
 
-        public const int MaxWeight = 25;        
+        public const int MaxWeight = 25;
 
-        //I do not know if you are oversized. Find it out yourself if you are inheriting me.
-        public abstract bool OverSized(IPackageDimension packageDimension);
-
+        public abstract int Length { get; set; }
+        public abstract int Breadth { get; set; }
+        public abstract int Height { get; set; }
+        
         //Incoming package alert! Let me see if I can handle it.
         public virtual void HandlePackage(IPackageDimension dimension)
         {
@@ -35,6 +36,17 @@ namespace ShipmentSolution.Domain.Handler
             return packageDimension.Weight > MaxWeight ? true : false;
         }
 
+        //Let's check if the you can fit in the incoming package
+        //Again, the subclasses can handle requirement changes adding their own flavour.
+        public virtual bool OverSized(IPackageDimension packageDimension)
+        {
+            if (packageDimension.Length > Length || packageDimension.Breadth > Breadth || packageDimension.Height > Height)
+            {
+                return true;
+            }
+            return false;
+        }
+        
         //I cannot handle this package. Ask the next one. 
         public void SetNextPackage(PackageHandler next)
         {

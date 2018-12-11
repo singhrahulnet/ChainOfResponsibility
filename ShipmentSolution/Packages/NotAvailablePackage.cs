@@ -5,10 +5,16 @@ using System;
 namespace ShipmentSolution.Packages
 {
     public class NotAvailablePackage : PackageHandler
-    {        
-        public override bool OverSized(IPackageDimension dimension)
+    {
+        public override int Length
         {
-            throw new Exception("Larger Package not available.");
+            get =>
+
+throw new Exception("Larger Package Not Available");
+
+            set => throw new NotImplementedException();
         }
+        public override int Breadth { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public override int Height { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }
