@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ShipmentSolution.Domain.Handler;
 using ShipmentSolution.Models;
-using ShipmentSolution.Handler;
+using System;
 
 namespace ShipmentSolution.Packages
 {
-    class NotAvailablePackage : PackageHandler
-    {
-
-        public override void HandlePackage(PackageDimension dimension)
+    public class NotAvailablePackage : PackageHandler
+    {        
+        public override bool OverSized(IPackageDimension dimension)
         {
-           
+            throw new Exception("Larger Package not available.");
         }
-
-
     }
 }

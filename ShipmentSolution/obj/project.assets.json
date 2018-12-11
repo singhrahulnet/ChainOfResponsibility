@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Rahul\\Git\\ShipmentSolution\\ShipmentSolution\\ShipmentSolution.csproj",
+      "projectUniqueName": "C:\\Rahul\\ShipmentSolution\\ShipmentSolution\\ShipmentSolution.csproj",
       "projectName": "ShipmentSolution",
-      "projectPath": "C:\\Rahul\\Git\\ShipmentSolution\\ShipmentSolution\\ShipmentSolution.csproj",
+      "projectPath": "C:\\Rahul\\ShipmentSolution\\ShipmentSolution\\ShipmentSolution.csproj",
       "packagesPath": "C:\\Users\\Rahul Singh\\.nuget\\packages\\",
-      "outputPath": "C:\\Rahul\\Git\\ShipmentSolution\\ShipmentSolution\\obj\\",
+      "outputPath": "C:\\Rahul\\ShipmentSolution\\ShipmentSolution\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

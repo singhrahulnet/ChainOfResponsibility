@@ -1,23 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ShipmentSolution.Domain.Handler;
 using ShipmentSolution.Models;
-using ShipmentSolution.Handler;
 
 namespace ShipmentSolution.Packages
 {
-    class MediumPackage : PackageHandler
+    public class MediumPackage : PackageHandler
     {
-
-        public override void HandlePackage(PackageDimension dimension)
-        {
-            if (IsPackageBigger(dimension))
-            {
-                nextPackage.HandlePackage(dimension);
-            }
-        }
-
-        private bool IsPackageBigger(PackageDimension dimension)
+        public override bool OverSized(IPackageDimension dimension)
         {
             if (dimension.Length > 300 || dimension.Breadth > 400 || dimension.Height > 200)
             {

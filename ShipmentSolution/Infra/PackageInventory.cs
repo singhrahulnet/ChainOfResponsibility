@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ShipmentSolution.Handler;
+using ShipmentSolution.Domain.Handler;
 using ShipmentSolution.Packages;
 
 namespace ShipmentSolution.Infra
@@ -12,7 +12,7 @@ namespace ShipmentSolution.Infra
 
         public PackageInventory()
         {
-            GetAllAvailablePackages();
+            InitAllAvailablePackages();
         }
 
         public PackageHandler SmallestPackage
@@ -25,14 +25,13 @@ namespace ShipmentSolution.Infra
             get { return _allpackages; }
         }
 
-        private void GetAllAvailablePackages()
+        private void InitAllAvailablePackages()
         {
             _allpackages = new SortedList<int, PackageHandler>();
             _allpackages.Add(10, new SmallPackage());
             _allpackages.Add(20, new MediumPackage());
             _allpackages.Add(30, new LargePackage());
             _allpackages.Add(40, new NotAvailablePackage());
-
         }
     }
 }

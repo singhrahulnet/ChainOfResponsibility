@@ -1,7 +1,5 @@
-﻿using ShipmentSolution.Handler;
-using System;
+﻿using ShipmentSolution.Domain.Handler;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ShipmentSolution.Infra
 {

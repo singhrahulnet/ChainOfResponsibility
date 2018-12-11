@@ -1,6 +1,4 @@
-﻿
-
-using ShipmentSolution.Handler;
+﻿using ShipmentSolution.Domain.Handler;
 using System.Collections.Generic;
 
 namespace ShipmentSolution.Infra
