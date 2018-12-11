@@ -1,4 +1,5 @@
-﻿using ShipmentSolution.Infra;
+﻿using ShipmentSolution.Domain.Handler;
+using ShipmentSolution.Infra;
 using ShipmentSolution.Models;
 
 namespace ShipmentSolution

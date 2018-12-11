@@ -15,7 +15,7 @@ namespace ShipmentSolution.Domain.Handler
         public abstract int Length { get; set; }
         public abstract int Breadth { get; set; }
         public abstract int Height { get; set; }
-        
+
         //Incoming package alert! Let me see if I can handle it.
         public virtual void HandlePackage(IPackageDimension dimension)
         {
@@ -25,28 +25,32 @@ namespace ShipmentSolution.Domain.Handler
             }
             if (OverSized(dimension))
             {
-                nextPackage.HandlePackage(dimension);
+                //Cannot handle it. Passing it to a bigger guy
+                if (nextPackage != null) nextPackage.HandlePackage(dimension);
             }
         }
 
-        //The absrtact class sets max weight globally 
-        //but it can be set at subclass level as well
+        //The absrtact class sets max weight globally but it can be set at subclass level as well
         public virtual bool OverWeight(IPackageDimension packageDimension)
         {
-            return packageDimension.Weight > MaxWeight ? true : false;
+            return packageDimension.Weight > MaxWeight;
         }
 
-        //Let's check if the you can fit in the incoming package
-        //Again, the subclasses can handle requirement changes adding their own flavour.
+        //Can I fit it in? Again, the subclasses can handle requirement changes by adding their own flavour.
         public virtual bool OverSized(IPackageDimension packageDimension)
         {
-            if (packageDimension.Length > Length || packageDimension.Breadth > Breadth || packageDimension.Height > Height)
-            {
-                return true;
-            }
-            return false;
+            return
+                //Compare as is
+                (packageDimension.Length > Length
+                || packageDimension.Breadth > Breadth
+                || packageDimension.Height > Height
+                );
+
+            /*OR
+            what if we try to fit the package Breadth-wise? It can still fit in right?
+            Implement if needed */
         }
-        
+
         //I cannot handle this package. Ask the next one. 
         public void SetNextPackage(PackageHandler next)
         {
