@@ -10,7 +10,6 @@ namespace ShipmentSolution.Infra
         public Startup(SortedList<int, PackageHandler> packages)
         {
             _packages = packages;
-
         }
 
         public void SetChain()
