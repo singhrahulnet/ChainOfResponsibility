@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ShipmentSolution.Domain.Handler;
+﻿using ShipmentSolution.Domain.Handler;
 using ShipmentSolution.Packages;
+using System.Collections.Generic;
 
 namespace ShipmentSolution.Infra
 {
@@ -13,6 +11,15 @@ namespace ShipmentSolution.Infra
         public PackageInventory()
         {
             InitAllAvailablePackages();
+            SetChain();
+        }
+
+        private void SetChain()
+        {
+            for (int i = 0; i < _allpackages.Count - 1; i++)
+            {
+                _allpackages.Values[i].SetNextPackage(_allpackages.Values[i + 1]);
+            }
         }
 
         public PackageHandler SmallestPackage
@@ -27,11 +34,12 @@ namespace ShipmentSolution.Infra
 
         private void InitAllAvailablePackages()
         {
-            _allpackages = new SortedList<int, PackageHandler>();
-            _allpackages.Add(10, new SmallPackage());
-            _allpackages.Add(20, new MediumPackage());
-            _allpackages.Add(30, new LargePackage());
-            _allpackages.Add(40, new NotAvailablePackage());
+            _allpackages = new SortedList<int, PackageHandler>
+            {
+                { 10, new SmallPackage() },
+                { 20, new MediumPackage() },
+                { 30, new LargePackage() }
+            };
         }
     }
 }

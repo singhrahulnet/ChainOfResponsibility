@@ -8,8 +8,9 @@ namespace ShipmentSolution.Packages
 {
     public class LargePackage : PackageHandler
     {
-        public override int Length { get; set; } = 400;
-        public override int Breadth { get; set; } = 600;
-        public override int Height { get; set; } = 250;        
+        public override int Length => 400;
+        public override int Breadth => 600;
+        public override int Height => 250;
+        public override int Cost => 15;
     }
 }

@@ -1,13 +1,13 @@
 ﻿namespace ShipmentSolution.Models
 {
-    public interface IPackageDimension
+    public interface IArgs
     {
         int Length { get; set; }
         int Breadth { get; set; }
         int Height { get; set; }
         int Weight { get; set; }
     }
-    public class PackageDimension : IPackageDimension
+    public class Arguments : IArgs
     {
         public int Length { get; set; }
         public int Breadth { get; set; }

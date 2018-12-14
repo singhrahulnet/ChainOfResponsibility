@@ -1,23 +1,25 @@
-﻿using ShipmentSolution.Domain.Handler;
-using System.Collections.Generic;
+﻿using Microsoft.Extensions.DependencyInjection;
+using ShipmentSolution.Domain;
+using ShipmentSolution.IOService;
+using ShipmentSolution.Models;
+using System;
 
 namespace ShipmentSolution.Infra
 {
     class Startup : IStartup
     {
-        private SortedList<int, PackageHandler> _packages;
-
-        public Startup(SortedList<int, PackageHandler> packages)
+        public IServiceProvider Init()
         {
-            _packages = packages;
-        }
+            IServiceProvider serviceProvider = new ServiceCollection()
+           .AddSingleton<IPackageInventory, PackageInventory>()
+           .AddSingleton<IArgs, Arguments>()
+           .AddScoped<IResult, Result>()
+           .AddScoped<IInputService, InputService>()
+           .AddScoped<IOutputService, OutputService>()
+           .AddScoped<ICostCalculatorLoop, CostCalculatorLoop>()
+           .BuildServiceProvider();
 
-        public void SetChain()
-        {
-            for (int i = 0; i < _packages.Count - 1; i++)
-            {
-                _packages.Values[i].SetNextPackage(_packages.Values[i + 1]);
-            }
+            return serviceProvider;
         }
     }
 }

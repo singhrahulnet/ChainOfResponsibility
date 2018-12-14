@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ShipmentSolution.Domain.Handler;
-using ShipmentSolution.Models;
+﻿using ShipmentSolution.Domain.Handler;
 
 namespace ShipmentSolution.Packages
 {
     public class MediumPackage : PackageHandler
     {
-        public override int Length { get; set; } = 300;
-        public override int Breadth { get; set; } = 400;
-        public override int Height { get; set; } = 200;
+        public override int Length => 300;
+        public override int Breadth => 400;
+        public override int Height => 200;
+        public override int Cost => 10;
     }
 }
