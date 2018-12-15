@@ -7,7 +7,7 @@
 A console application to showcase *Chain Of Responsibility* design pattern with *dependency injection*.
 
 ## Problem Statement
-Develop a service for a shipping company to calculate cost and type of package required to ship an item. The input supplied will be dimensions and weight of the item. The upper limit of weght is 25kg per package.
+Develop a service for a shipping company to calculate cost and type of package required to ship an item. The input supplied will be dimensions and weight of the item. The upper limit of weight is 25kg per package.
 
 | Package Type| Length | Breadth | Height | Cost
 | --- | --- | --- | --- | --- |
