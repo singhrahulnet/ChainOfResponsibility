@@ -50,7 +50,7 @@ Develop a service for a shipping company to calculate cost and type of package r
 
 ## Support or Contact
 
-Having any trouble? Please read out this [documentation](https://github.com/singhrahulnet/ChainOfResponsibility/blob/master/README.md) or [contact](mailto:singh.rahul.net@gmail.com) and to sort it out.
+Having any trouble? Please read out this [documentation](https://github.com/singhrahulnet/ChainOfResponsibility/blob/master/README.md) or [contact](mailto:singh.rahul.net@gmail.com) to sort it out.
 
  [![HitCount](http://hits.dwyl.io/singhrahulnet/ChainOfResponsibility/projects/1.svg)](http://hits.dwyl.io/singhrahulnet/ChainOfResponsibility/projects/1) | ![GitHub contributors](https://img.shields.io/github/contributors/singhrahulnet/ChainOfResponsibility.svg?style=plastic)|
  | --- | --- |
