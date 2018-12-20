@@ -26,7 +26,7 @@ Develop a service for a shipping company to calculate cost and type of package r
 
 >   Kindly clone /download the repository.
 
->   Open the solution file 'ShipmentSolution.sln' from VisualStudio 2017
+>   Open the solution file 'ShipmentSolution.sln' from Visual Studio 2017
 
 >   Build and Run the project
 
